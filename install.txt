@@ -1,1 +1,1 @@
-sudo apt install build-essential git vim clang ddd sasm gcc-multilib
+sudo apt install build-essential git vim clang ddd sasm nasm gcc-multilib

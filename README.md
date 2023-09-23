@@ -120,6 +120,7 @@ catch
 endtry
 
 set cin
+set number
 set background=dark
 
 " Set extra options when running in GUI mode

@@ -1,3 +1,5 @@
+Before installing: sudo apt update && sudo apt upgrade
+
 C: sudo apt install gdb build-essential git gcc vim clang lldb gcc-multilib
 
 

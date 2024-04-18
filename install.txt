@@ -1,1 +1,4 @@
-sudo apt install gdb  build-essential git vim clang ddd sasm nasm gcc-multilib
+C: sudo apt install gdb build-essential git vim clang lldb gcc-multilib
+
+
+Assembly: sudo apt install gdb  build-essential git vim clang lldb ddd sasm nasm gcc-multilib

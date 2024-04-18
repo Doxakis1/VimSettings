@@ -1,0 +1,17 @@
+set history=500
+set cmdheight=1
+set hid
+set smartcase
+set hlsearch
+set incsearch
+set foldcolumn=1
+syntax enable
+colorscheme murphy
+set cin
+set number
+set background=dark
+set smarttab
+set shiftwidth=4
+set tabstop=4
+set lbr
+set tw=25

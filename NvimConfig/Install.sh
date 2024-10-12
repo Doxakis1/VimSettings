@@ -9,3 +9,6 @@ sudo echo 'export PATH="$PATH:/opt/nvim-linux64/bin"' >> ~/.bashrc
 sudo rm -rf ~/.config/nvim
 sudo cp -R nvim ~/.config
 sudo echo 'alias vim="nvim"' >> ~/.bashrc
+sudo echo 'export PATH="$PATH:/opt/nvim-linux64/bin"' >> ~/.bashrc
+sudo echo 'alias vim="nvim"' >> ~/.zshrc
+sudo echo 'export PATH="$PATH:/opt/nvim-linux64/bin"' >> ~/.zshrc

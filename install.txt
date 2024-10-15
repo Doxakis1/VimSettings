@@ -4,4 +4,4 @@ C: sudo apt install gdb build-essential git gcc vim clang lldb gcc-multilib curl
 
 Assembly: sudo apt install gdb  build-essential gcc git vim clang lldb ddd sasm nasm gcc-multilib curl tmux
 
-
+Arduino: sudo apt install gcc-avr avr-libc avrdude

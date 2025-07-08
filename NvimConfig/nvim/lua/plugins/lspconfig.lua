@@ -8,5 +8,6 @@ return {
                 vim.keymap.set('n', 'gh', ':ClangdSwitchSourceHeader<cr>', { silent = true })
             end,
         }
+		configs.pyright.setup{}
     end
 }

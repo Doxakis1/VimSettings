@@ -10,4 +10,5 @@ if [[ -z "$RECORDING_PID" || ! "$RECORDING_PID" =~ ^[0-9]+$ ]]; then
 else
     echo "Stopping recording process $RECORDING_PID"
     kill -15 "$RECORDING_PID"
+    rm "$RECORDING_FILE"
 fi

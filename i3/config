@@ -122,13 +122,13 @@ bindsym $mod+a focus parent
 set $ws1 "1: LocalTerminal"
 set $ws2 "2: SSHTerminal"
 set $ws3 "3: VNCWindow"
-set $ws4 "4: Firefox"
+set $ws4 "4: Browsers"
 set $ws5 "5: MicrosoftEdge"
 set $ws6 "6: Misc"
-set $ws7 "7"
-set $ws8 "8"
-set $ws9 "9"
-set $ws10 "10"
+set $ws7 "7: TestingGround"
+set $ws8 "8: Music"
+set $ws9 "9: Discord"
+set $ws10 "10: NeverUsedLOL"
 
 # switch to workspace
 bindsym $mod+1 workspace  $ws1
@@ -155,6 +155,7 @@ bindsym $mod+Shift+9 move container to workspace  $ws9
 bindsym $mod+Shift+0 move container to workspace  $ws10
 
 assign [class="firefox_firefox"] $ws4
+assign [class="qute_browser"] $ws4
 assign [class="Microsoft-edge"] $ws5
 assign [class="TigerVNC Viewer"] $ws3
 assign [class="TigerVNC Viewer"] $ws3
@@ -200,4 +201,4 @@ bar {
         status_command i3status
 }
 
-exec_always feh --bg-scale /home/mkaratzid/Downloads/wallapaper.png
+#exec_always feh --bg-scale /home/$USER/.wallapaper.png

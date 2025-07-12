@@ -16,3 +16,7 @@ set shiftwidth=4
 set tabstop=4
 set lbr
 set clipboard+=unnamedplus
+augroup CopyOnYank
+  autocmd!
+  autocmd TextYankPost * if v:event.operator is 'y' && v:event.regname is '+' | call system('xclip -selection clipboard', getreg('+')) | endif
+augroup END

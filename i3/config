@@ -155,9 +155,8 @@ bindsym $mod+Shift+9 move container to workspace  $ws9
 bindsym $mod+Shift+0 move container to workspace  $ws10
 
 assign [class="firefox_firefox"] $ws4
-assign [class="qute_browser"] $ws4
+assign [class="qutebrowser"] $ws4
 assign [class="Microsoft-edge"] $ws5
-assign [class="TigerVNC Viewer"] $ws3
 assign [class="TigerVNC Viewer"] $ws3
 assign [class="ZSTray"] $ws6
 

@@ -22,6 +22,15 @@ vim.cmd("set cc=180")
 vim.cmd("set ignorecase")
 vim.cmd("set nowrap")
 
+vim.api.nvim_create_autocmd("TextYankPost", {
+  callback = function()
+    if vim.v.event.regname == "+" then
+      local text = vim.fn.getreg("+")
+      vim.fn.system({ "xclip", "-selection", "clipboard" }, text)
+    end
+  end,
+})
+
 vim.api.nvim_create_autocmd('LspAttach', {
     group = vim.api.nvim_create_augroup('UserLspConfig', {}),
     callback = function(ev)

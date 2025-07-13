@@ -159,6 +159,7 @@ assign [class="qutebrowser"] $ws4
 assign [class="Microsoft-edge"] $ws5
 assign [class="TigerVNC Viewer"] $ws3
 assign [class="ZSTray"] $ws6
+assign [class="discord"] $ws9
 
 # reload the configuration file
 bindsym $mod+Shift+c reload

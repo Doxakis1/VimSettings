@@ -201,4 +201,8 @@ bar {
         status_command i3status
 }
 
-#exec_always feh --bg-scale /home/$USER/.wallapaper.png
+#moving workspaces to windowns
+bindsym $mod+Shift+p move workspace to output right
+bindsym $mod+Shift+o move workspace to output left
+
+#exec_always feh --bg-fill /home/$USER/.wallapaper.png

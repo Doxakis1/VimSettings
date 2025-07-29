@@ -204,6 +204,8 @@ bar {
 #moving workspaces to windowns
 bindsym $mod+Shift+p move workspace to output right
 bindsym $mod+Shift+o move workspace to output left
-bindsym Print exec scrot -s -e 'mv $f ~/Pictures/'
+
+#Taking a screenshot NOTE: requires scrot
+bindsym --release Print exec scrot -s -e 'mv $f ~/Pictures/'
 
 #exec_always feh --bg-fill /home/$USER/.wallapaper.png

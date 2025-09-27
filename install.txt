@@ -2,6 +2,8 @@ Before installing: sudo apt update && sudo apt upgrade
 
 C: sudo apt install gdb build-essential git gcc vim clang lldb gcc-multilib curl tmux
 
+Go: gopls #The rest you need to download from go.dev site
+
 Assembly: sudo apt install gdb  build-essential gcc git vim clang lldb ddd sasm nasm gcc-multilib curl tmux
 
 Arduino: sudo apt install gcc-avr avr-libc avrdude

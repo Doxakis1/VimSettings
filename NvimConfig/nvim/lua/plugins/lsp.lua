@@ -139,7 +139,8 @@ return {
 			"gopls",
 			"templ",
 			"eslint",
-			"pyright", -- ← Python added
+			"pyright",
+			"bashls",
 		}
 
 		require("mason-lspconfig").setup({
@@ -247,6 +248,15 @@ return {
 					})
 				end,
 
+				-----------------------------------------------------------------
+				-- Bash
+				-----------------------------------------------------------------
+				bashls = function()
+					require("lspconfig").bashls.setup({
+						capabilities = capabilities,
+						filetypes = { "sh", "bash", "zsh" },
+					})
+				end,
 				-----------------------------------------------------------------
 				-- C/C++
 				-----------------------------------------------------------------

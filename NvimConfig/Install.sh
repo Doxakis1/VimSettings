@@ -1,8 +1,9 @@
 #install dependencies:
 sudo apt update
 sudo apt upgrade -y
-sudo apt install -y bear tmux gdb build-essential git gcc vim clang lldb clangd gcc-multilib ddd sasm nasm nodejs npm golang-go python3 python3-pip clang gcc g++ make curl unzip tar dmd-compiler ldc dub
+sudo apt install -y bear tmux gdb build-essential git gcc vim clang lldb clangd gcc-multilib ddd sasm nasm nodejs npm golang-go python3 python3-pip clang gcc g++ make curl unzip tar ldc dub shellcheck
 go install golang.org/x/tools/gopls@latest
+sudo npm install -g bash-language-server
 curl https://sh.rustup.rs -sSf | sh
 curl -LO https://github.com/neovim/neovim/releases/download/nightly/nvim-linux-x86_64.tar.gz 
 sudo tar -C /opt/ -xzf nvim-linux-x86_64.tar.gz --strip-components=1

@@ -9,7 +9,6 @@ sed -i '/nvim-linux-x86/d' ~/.bashrc
 sed -i '/nvim-linux-x86/d' ~/.zshrc
 echo 'export PATH="$PATH:/opt/nvim-linux-x86_64/bin"' >> ~/.bashrc
 echo 'export PATH="$PATH:/opt/nvim-linux-x86_64/bin"' >> ~/.zshrc
-# I now use this for nvim config: https://github.com/ThePrimeagen/neovimrc.git
 rm -rf ~/.config/nvim
 cp -R nvim ~/.config/nvim
 wget -P ~/.local/share/fonts https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/JetBrainsMono.zip && cd ~/.local/share/fonts && unzip JetBrainsMono.zip && rm JetBrainsMono.zip && fc-cache -fv

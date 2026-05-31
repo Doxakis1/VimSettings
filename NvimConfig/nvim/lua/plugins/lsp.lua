@@ -89,7 +89,7 @@ return {
 				map("n", "<F4>", vim.lsp.buf.code_action)
 
 				-- Document highlight
-				if client.supports_method("textDocument/documentHighlight") then
+				if client.server_capabilities.documentHighlightProvider then
 					local group = vim.api.nvim_create_augroup("lsp-highlight", { clear = false })
 					vim.api.nvim_create_autocmd({ "CursorHold", "CursorHoldI" }, {
 						buffer = buf,
@@ -105,18 +105,18 @@ return {
 
 				-- Format on save (except excluded)
 				local excluded = { php = true, c = true, cpp = true }
-				if client.supports_method("textDocument/formatting")
+				if client.server_capabilities.documentFormattingProvider
 					and not excluded[vim.bo[buf].filetype]
-				then
-					vim.api.nvim_create_autocmd("BufWritePre", {
-						buffer = buf,
-						callback = function()
-							vim.lsp.buf.format({ bufnr = buf, timeout_ms = 1000 })
-						end,
-					})
-				end
-			end,
-		})
+					then
+						vim.api.nvim_create_autocmd("BufWritePre", {
+							buffer = buf,
+							callback = function()
+								vim.lsp.buf.format({ bufnr = buf, timeout_ms = 1000 })
+							end,
+						})
+					end
+				end,
+			})
 
 		---------------------------------------------------------------------
 		-- Mason setup

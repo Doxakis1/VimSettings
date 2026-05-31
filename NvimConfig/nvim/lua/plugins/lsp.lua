@@ -134,6 +134,7 @@ return {
 			"zls",
 			"rust_analyzer",
 			"clangd",
+			"asm_lsp",
 			"serve_d",
 			"jsonls",
 			"gopls",
@@ -258,6 +259,15 @@ return {
 					})
 				end,
 				-----------------------------------------------------------------
+				-- ASM
+				-----------------------------------------------------------------
+				asm_lsp = function()
+					require("lspconfig").asm_lsp.setup({
+						capabilities = capabilities,
+						filetypes = { "asm", "s", "S" },
+					})
+				end,
+				-----------------------------------------------------------------
 				-- C/C++
 				-----------------------------------------------------------------
 				clangd = function()
@@ -364,7 +374,7 @@ return {
 				end,
 			},
 			mapping = cmp.mapping.preset.insert({
-				["<CR>"] = cmp.mapping.confirm({ select = false }),
+				["<C-y>"] = cmp.mapping.confirm({ select = false }),
 				["<C-f>"] = cmp.mapping.scroll_docs(5),
 				["<C-u>"] = cmp.mapping.scroll_docs(-5),
 				["<C-e>"] = cmp.mapping(function()

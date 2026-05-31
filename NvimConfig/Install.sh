@@ -1,7 +1,7 @@
 #install dependencies:
 sudo apt update
 sudo apt upgrade -y
-sudo apt install -y bear tmux gdb build-essential git gcc vim clang lldb clangd gcc-multilib ddd sasm nasm
+sudo apt install -y bear tmux gdb build-essential git gcc vim clang lldb clangd gcc-multilib ddd sasm nasm nodejs npm unzip
 curl -LO https://github.com/neovim/neovim/releases/download/nightly/nvim-linux-x86_64.tar.gz 
 sudo tar -C /opt/ -xzf nvim-linux-x86_64.tar.gz --strip-components=1
 rm nvim-linux-x86_64.tar.gz

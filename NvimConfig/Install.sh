@@ -5,7 +5,7 @@ sudo apt install -y bear tmux gdb build-essential git gcc vim clang lldb clangd 
 go install golang.org/x/tools/gopls@latest
 sudo npm install -g bash-language-server
 curl -LO https://github.com/neovim/neovim/releases/download/nightly/nvim-linux-x86_64.tar.gz 
-sudo tar -C /opt/ -xzf nvim-linux-x86_64.tar.gz --strip-components=1
+sudo tar -C /opt/ -xzf nvim-linux-x86_64.tar.gz
 rm nvim-linux-x86_64.tar.gz
 sed -i '/nvim-linux-x86/d' ~/.bashrc
 sed -i '/nvim-linux-x86/d' ~/.zshrc

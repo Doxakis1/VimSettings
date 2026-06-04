@@ -107,16 +107,16 @@ return {
 				local excluded = { php = true, c = true, cpp = true }
 				if client.server_capabilities.documentFormattingProvider
 					and not excluded[vim.bo[buf].filetype]
-					then
-						vim.api.nvim_create_autocmd("BufWritePre", {
-							buffer = buf,
-							callback = function()
-								vim.lsp.buf.format({ bufnr = buf, timeout_ms = 1000 })
-							end,
-						})
-					end
-				end,
-			})
+				then
+					vim.api.nvim_create_autocmd("BufWritePre", {
+						buffer = buf,
+						callback = function()
+							vim.lsp.buf.format({ bufnr = buf, timeout_ms = 1000 })
+						end,
+					})
+				end
+			end,
+		})
 
 		---------------------------------------------------------------------
 		-- Mason setup
@@ -134,7 +134,6 @@ return {
 			"zls",
 			"rust_analyzer",
 			"clangd",
-			"asm_lsp",
 			"serve_d",
 			"jsonls",
 			"gopls",
@@ -256,15 +255,6 @@ return {
 					require("lspconfig").bashls.setup({
 						capabilities = capabilities,
 						filetypes = { "sh", "bash", "zsh" },
-					})
-				end,
-				-----------------------------------------------------------------
-				-- ASM
-				-----------------------------------------------------------------
-				asm_lsp = function()
-					require("lspconfig").asm_lsp.setup({
-						capabilities = capabilities,
-						filetypes = { "asm", "s", "S" },
 					})
 				end,
 				-----------------------------------------------------------------
